@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registrar_movimientofragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentRegistroMovimientos"
+    android:background="#ECE6FF">
+
+    <!-- Contenedor principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ECE6FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Toolbar -->
+                <include layout="@layout/toolbar" />
+
+            </LinearLayout>
+
+
+
+            <!-- Tipo de Movimiento -->
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="#2905E8" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mov_tipo_uno"
+                    android:buttonTint="#6E63C0"
+                    android:textColor="#6E63C0" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mov_tipo_dos"
+                    android:buttonTint="#6E63C0"
+                    android:textColor="#6E63C0" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mov_tipo_tres"
+                    android:buttonTint="#6E63C0"
+                    android:textColor="#6E63C0" />
+
+            </RadioGroup>
+
+            <!-- Observaciones y Monto -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="#2905E8" />
+
+            <EditText
+                android:id="@+id/txt_observaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#6E63C0"
+                android:drawableStart="@drawable/observarsmall"
+                android:drawablePadding="8dp"
+                android:hint="@string/hint_observaciones"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="#6E63C0" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#6E63C0"
+                android:drawableStart="@drawable/montosmall"
+                android:drawablePadding="8dp"
+                android:hint="@string/hint_monto"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="#6E63C0"
+                tools:inputType="number" />
+
+            <!-- Selector de Fecha -->
+            <EditText
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/entregasmall"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:hint="@string/hint_fecha"
+                android:clickable="false"
+                android:focusable="false"
+                />
+
+            <!-- Origen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_op_movimientos"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <!-- Incluir Item de Cuenta -->
+            <include layout="@layout/lista_cuenta_card" />
+
+            <!-- Destino -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DESTINO:"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <!-- Incluir Item de Cuenta -->
+            <include layout="@layout/lista_cuenta_card" />
+
+            <!-- Naturaleza -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/naturaleza"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <include layout="@layout/options_movimiento"/>
+
+            <!-- Naturaleza -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departamento"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <include layout="@layout/options_movimiento"/>
+
+            <!-- Naturaleza -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caregoria"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <include layout="@layout/options_movimiento"/>
+
+            <!-- Naturaleza -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/concepto"
+                android:textSize="16sp"
+                android:textColor="#6E63C0"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <include layout="@layout/options_movimiento"/>
+
+
+            <!-- Botón de Guardar -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GUARDAR"
+                android:backgroundTint="#6E63C0"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

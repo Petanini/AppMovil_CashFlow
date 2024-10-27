@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/usuario"
+        android:title="@string/nav_usuario" />
+    <item
+        android:id="@+id/nav_balance"
+        android:icon="@drawable/tarjeta"
+        android:title="@string/nav_movimientos" />
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/barras"
+        android:title="@string/nav_reportes" />
+
+    <item
+        android:id="@+id/nav_register"
+        android:icon="@drawable/dinero"
+        android:title="@string/nav_registro" />
+
+</menu>
