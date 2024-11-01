@@ -1,9 +1,11 @@
-package com.example.cashflow
+package com.example.cashflow.model.providers
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cashflow.R
+import com.example.cashflow.model.entities.Cuenta
 
 class CuentaAdapter(private val cuentas: List<Cuenta>) : RecyclerView.Adapter<CuentaAdapter.CuentaViewHolder>() {
 

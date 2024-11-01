@@ -1,4 +1,4 @@
-package com.example.cashflow
+package com.example.cashflow.model.entities
 
 data class Cuenta(
     val nombreBanco: String,

@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cashflow.databinding.ActivityMainBinding
 import com.example.cashflow.databinding.FragmentHomeBinding
+import com.example.cashflow.model.entities.Cuenta
+import com.example.cashflow.model.providers.CuentaAdapter
 
 
 class HomeFragment : Fragment() {

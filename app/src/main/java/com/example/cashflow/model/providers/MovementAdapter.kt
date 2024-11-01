@@ -1,9 +1,11 @@
-package com.example.cashflow
+package com.example.cashflow.model.providers
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cashflow.R
+import com.example.cashflow.model.entities.Movement
 
 class MovementAdapter(private val movements: List<Movement>) :
     RecyclerView.Adapter<MovementAdapter.MovementViewHolder>() {
@@ -25,7 +27,7 @@ class MovementAdapter(private val movements: List<Movement>) :
         holder.tvTitle.text = movement.title
         holder.tvDate.text = movement.date
 
-        // Configurar el monto y cambiar el color basado en si es ingreso o gasto
+        //  aquei se Configura el monto y se cambia el color  si es ingreso o gasto
         holder.tvAmount.text = "${if (movement.isIncome) "+" else "-"} ${movement.amount} $"
         holder.tvAmount.setTextColor(
             holder.itemView.context.getColor(if (movement.isIncome) R.color.green else R.color.red)

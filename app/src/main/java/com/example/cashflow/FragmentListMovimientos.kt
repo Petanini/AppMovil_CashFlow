@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cashflow.databinding.FragmentListMovimientosBinding
+import com.example.cashflow.model.entities.Movement
+import com.example.cashflow.model.providers.MovementAdapter
 
 
 class FragmentListMovimientos : Fragment() {
